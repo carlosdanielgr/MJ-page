@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@use "mixins" as *;
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+
+@font-face {
+  font-family: euclid;
+  src: url(./../assets/fonts/Euclid\ Circular\ A\ Medium.ttf);
+}
+
+@font-face {
+  font-family: porsha;
+  src: url(./../assets/fonts/PorshaRichela.ttf);
+}
+
+:root {
+  --bg-color: #fcfdfd;
+  --cl-yellow: #f7de8c;
+  --cl-black: #3d422e;
+  --cl-white: #f8f4e7;
+}
+
+* {
+  font-size: 14px;
+
+  @include screen(small) {
+    font-size: 16px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: euclid;
+}
+
+figure {
+  margin: 0;
+}
+
+.btn {
+  white-space: nowrap;
+  max-width: fit-content;
+  padding: 0.4rem 1rem;
+  font-size: 0.65rem;
+  border-color: transparent;
+}
+
+.btn-primary {
+  background-color: var(--cl-yellow);
+  color: var(--cl-black);
+}
+
+.btn-secondary {
+  background-color: var(--cl-white);
+  color: var(--cl-black);
+}

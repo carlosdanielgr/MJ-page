@@ -1,0 +1,64 @@
+@use "./../../../styles/mixins" as *;
+
+.main-content {
+  position: relative;
+  height: 100vh;
+  @include screen(small) {
+    height: calc(70vh + 10%);
+  }
+  &__navbar {
+    position: absolute;
+    z-index: 1;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  &__logo {
+    max-width: 10rem;
+  }
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 1rem;
+    @include screen(custom, max, 420) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__title {
+    @include absoluteCenter(50%, 30%);
+    text-align: center;
+    color: var(--bg-color);
+    z-index: 1;
+    font-size: 1.8rem;
+    width: 70%;
+    max-width: 50rem;
+    font-family: porsha;
+    @include screen(small) {
+      font-size: 2.6rem;
+    }
+  }
+  &__img {
+    filter: brightness(67%);
+    @include screen(custom, max, 768) {
+      background-image: url(./../../../assets/images/main-mobile.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-clip: content-box;
+      background-position: center;
+      height: 100%;
+    }
+    > img {
+      width: 100%;
+      @include screen(custom, max, 768) {
+        display: none;
+      }
+    }
+  }
+  &__btn-more {
+    @include absoluteCenter(50%, 90%);
+  }
+}

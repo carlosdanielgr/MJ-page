@@ -1,0 +1,56 @@
+@use "./../../../styles/mixins" as *;
+
+.my-history {
+  max-height: 41.8rem;
+  @include screen(med-small) {
+    display: flex;
+  }
+  &__img {
+    flex: 1;
+    > img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__texts {
+    position: relative;
+    flex: 1;
+    display: flex;
+    background-color: var(--cl-yellow);
+    color: #864d39;
+  }
+  &__content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    @include screen(med-small) {
+      padding: 1rem 9rem 1rem 7.5rem;
+    }
+    > span {
+      font-family: porsha;
+      font-size: 1.2rem;
+      @include screen(small) {
+        font-size: 2.2rem;
+      }
+    }
+    > p span {
+      font-style: italic;
+      font-weight: 600;
+    }
+  }
+  &__text-rigth {
+    position: absolute;
+    transform: rotate(90deg);
+    font-family: porsha;
+    font-size: 9rem;
+    opacity: 0.5;
+    right: -3.8rem;
+    top: 8rem;
+    height: 0;
+    width: 0;
+    @include screen(custom, max, 992) {
+      display: none;
+    }
+  }
+}

@@ -1,16 +1,16 @@
 @use "./../../../styles/mixins" as *;
 
 .about-me {
-  @include screen(med) {
+  @include screen(med-small) {
     display: flex;
   }
   &__texts {
-    flex: 1;
     display: flex;
     background-color: #999f86;
     color: var(--cl-white);
     padding: 3rem;
     @include screen(med-small) {
+      width: 50%;
       height: 41.8rem;
       padding: 0;
     }

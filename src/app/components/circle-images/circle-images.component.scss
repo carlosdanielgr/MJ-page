@@ -1,0 +1,64 @@
+@use "./../../../styles/mixins" as *;
+
+%content-imgs {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  img {
+    max-width: 10rem;
+    @include screen(med-small) {
+      max-width: 14rem;
+    }
+  }
+}
+
+.circle-images {
+  max-width: 60rem;
+  margin: 4rem auto;
+  padding: 2rem 1rem;
+  background-image: url(./../../../assets/images/circle-images/circle.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  &__img-primary {
+    @extend %content-imgs;
+    margin-bottom: 5rem;
+    > figure {
+      flex: 1;
+      text-align: center;
+      &:first-child,
+      &:last-child {
+        transform: translateY(3rem);
+        @include screen(med) {
+          transform: translateY(7rem);
+        }
+      }
+    }
+  }
+  &__text-info {
+    text-align: center;
+    max-width: 38rem;
+    margin: 0 auto;
+    > h2 {
+      font-family: porsha;
+      font-size: 1.8rem;
+      @include screen(small) {
+        font-size: 3.1rem;
+      }
+    }
+  }
+  &__img-secondary {
+    @extend %content-imgs;
+    margin-top: 5rem;
+    > figure {
+      flex: 1;
+      text-align: center;
+      &:first-child,
+      &:last-child {
+        transform: translateY(-3rem);
+        @include screen(med) {
+          transform: translateY(-7rem);
+        }
+      }
+    }
+  }
+}

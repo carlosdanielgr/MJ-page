@@ -38,6 +38,10 @@ body {
   font-family: euclid;
 }
 
+img {
+  width: 100%;
+}
+
 figure {
   margin: 0;
 }
@@ -53,9 +57,27 @@ figure {
 .btn-primary {
   background-color: var(--cl-yellow);
   color: var(--cl-black);
+  &:hover,
+  &:active,
+  &:focus {
+    @include specificity() {
+      background-color: var(--cl-yellow);
+      color: var(--cl-black);
+      border-color: transparent;
+    }
+  }
 }
 
 .btn-secondary {
   background-color: var(--cl-white);
   color: var(--cl-black);
+  &:hover,
+  &:active,
+  &:focus {
+    @include specificity() {
+      background-color: var(--cl-white);
+      color: var(--cl-black);
+      border-color: transparent;
+    }
+  }
 }

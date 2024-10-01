@@ -52,7 +52,6 @@
       height: 100%;
     }
     > img {
-      width: 100%;
       @include screen(custom, max, 768) {
         display: none;
       }

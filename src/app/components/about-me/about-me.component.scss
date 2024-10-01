@@ -1,0 +1,54 @@
+@use "./../../../styles/mixins" as *;
+
+.about-me {
+  @include screen(med) {
+    display: flex;
+  }
+  &__texts {
+    flex: 1;
+    display: flex;
+    background-color: #999f86;
+    color: var(--cl-white);
+    padding: 3rem;
+    @include screen(med-small) {
+      height: 41.8rem;
+      padding: 0;
+    }
+  }
+  &__text-left {
+    display: inline-block;
+    transform: rotate(-90deg);
+    font-family: porsha;
+    font-size: 9rem;
+    white-space: nowrap;
+    opacity: 0.7;
+    margin-right: -24rem;
+    @include screen(custom, max, 992) {
+      display: none;
+    }
+  }
+  &__content-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    @include screen(small) {
+      padding-right: 5rem;
+    }
+    > span {
+      font-family: porsha;
+      font-size: 1.2rem;
+      @include screen(small) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+  &__imgs {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ebda;
+    padding: 4rem;
+  }
+}

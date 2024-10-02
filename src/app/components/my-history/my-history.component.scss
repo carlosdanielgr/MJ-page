@@ -25,7 +25,7 @@
     justify-content: center;
     padding: 3rem;
     @include screen(med-small) {
-      padding: 1rem 5rem;
+      padding: 1rem 0 1rem 5rem;
     }
     > span {
       font-family: porsha;
@@ -41,15 +41,12 @@
   }
   &__text-rigth {
     display: none;
-    // position: absolute;
-    // transform: rotate(90deg);
     // font-family: porsha;
     // font-size: 9rem;
     // opacity: 0.5;
-    // right: -3.8rem;
-    // top: 8rem;
-    // height: 0;
-    // width: 0;
+    // writing-mode: vertical-lr;
+    // margin-right: -3.7rem;
+    // margin-top: 4rem;
     // @include screen(custom, max, 992) {
     //   display: none;
     // }

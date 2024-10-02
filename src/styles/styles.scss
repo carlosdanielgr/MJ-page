@@ -31,10 +31,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--bg-color);
+  color: var(--cl-black);
   font-family: euclid;
 }
 

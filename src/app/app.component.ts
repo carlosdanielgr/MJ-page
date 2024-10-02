@@ -3,6 +3,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { CircleImagesComponent } from './components/circle-images/circle-images.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { MyHistoryComponent } from './components/my-history/my-history.component';
+import { CourseDescriptionComponent } from './components/course-description/course-description.component';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { MyHistoryComponent } from './components/my-history/my-history.component
     CircleImagesComponent,
     AboutMeComponent,
     MyHistoryComponent,
+    CourseDescriptionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

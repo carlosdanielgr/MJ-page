@@ -1,7 +1,7 @@
 @use "./../../../styles/mixins" as *;
 
 .my-history {
-  max-height: 41.8rem;
+  // max-height: 41.8rem;
   @include screen(med-small) {
     display: flex;
   }
@@ -25,7 +25,7 @@
     justify-content: center;
     padding: 3rem;
     @include screen(med-small) {
-      padding: 1rem 9rem 1rem 7.5rem;
+      padding: 1rem 5rem;
     }
     > span {
       font-family: porsha;
@@ -40,17 +40,18 @@
     }
   }
   &__text-rigth {
-    position: absolute;
-    transform: rotate(90deg);
-    font-family: porsha;
-    font-size: 9rem;
-    opacity: 0.5;
-    right: -3.8rem;
-    top: 8rem;
-    height: 0;
-    width: 0;
-    @include screen(custom, max, 992) {
-      display: none;
-    }
+    display: none;
+    // position: absolute;
+    // transform: rotate(90deg);
+    // font-family: porsha;
+    // font-size: 9rem;
+    // opacity: 0.5;
+    // right: -3.8rem;
+    // top: 8rem;
+    // height: 0;
+    // width: 0;
+    // @include screen(custom, max, 992) {
+    //   display: none;
+    // }
   }
 }

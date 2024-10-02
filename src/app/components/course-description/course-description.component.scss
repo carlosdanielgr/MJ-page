@@ -1,0 +1,54 @@
+@use "./../../../styles/mixins" as *;
+
+.course-des {
+  padding: 2rem 0;
+  &__title {
+    font-family: porsha;
+    font-size: 2.2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+    @include screen(small) {
+      border-bottom: 1px solid #dfdedb;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    @include screen(small) {
+      flex-direction: row;
+    }
+  }
+  &__text-left {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 1.5rem;
+    @include screen(custom, max, 992) {
+      display: none;
+    }
+  }
+  &__texts {
+    flex: 1;
+    padding: 2rem 1rem;
+    border-left: 1px solid #dfdedb;
+    > p:first-child {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+  &__join {
+    text-decoration: none;
+    color: #000;
+    font-style: italic;
+    font-weight: 600;
+  }
+  &__img {
+    flex: 1;
+    padding: 2rem 0;
+    > img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}

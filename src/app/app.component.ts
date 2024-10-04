@@ -10,6 +10,7 @@ import { ProductDescriptionComponent } from './components/product-description/pr
 import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
 import { GarmentsComponent } from './components/garments/garments.component';
 import { FormComponent } from './components/form/form.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { FormComponent } from './components/form/form.component';
     BestSellersComponent,
     GarmentsComponent,
     FormComponent,
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

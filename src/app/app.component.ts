@@ -9,6 +9,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
 import { GarmentsComponent } from './components/garments/garments.component';
+import { FormComponent } from './components/form/form.component';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +25,7 @@ import { GarmentsComponent } from './components/garments/garments.component';
     ProductDescriptionComponent,
     BestSellersComponent,
     GarmentsComponent,
+    FormComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

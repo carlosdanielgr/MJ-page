@@ -1,0 +1,37 @@
+@use "./../../../styles/mixins" as *;
+
+.form {
+  display: flex;
+  gap: 5rem;
+  padding: 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  @include screen(custom, max, 992) {
+    flex-direction: column;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    > input,
+    textarea {
+      color: var(--cl-black);
+      border: 1px solid var(--cl-black);
+      border-radius: 0.5rem;
+      padding: 0.8rem;
+      &::placeholder {
+        color: var(--cl-black);
+        font-size: 0.8rem;
+      }
+    }
+  }
+  &__content,
+  > figure {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  &__title {
+    font-size: 1.9rem;
+    font-family: porsha;
+  }
+}

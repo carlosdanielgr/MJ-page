@@ -13,9 +13,7 @@
     }
   }
   &__texts {
-    position: relative;
     flex: 1;
-    display: flex;
     background-color: var(--cl-yellow);
     color: #864d39;
   }
@@ -24,8 +22,14 @@
     flex-direction: column;
     justify-content: center;
     padding: 3rem;
-    @include screen(med-small) {
-      padding: 1rem 0 1rem 5rem;
+    height: 100%;
+    @include screen(med) {
+      padding: 1rem 11rem 1rem 6rem;
+      background-image: url(./../../../assets/images/history-text.png);
+      background-repeat: no-repeat;
+      background-size: 6.5rem;
+      background-position-x: right;
+      background-position-y: center;
     }
     > span {
       font-family: porsha;
@@ -38,17 +42,5 @@
       font-style: italic;
       font-weight: 600;
     }
-  }
-  &__text-rigth {
-    display: none;
-    // font-family: porsha;
-    // font-size: 9rem;
-    // opacity: 0.5;
-    // writing-mode: vertical-lr;
-    // margin-right: -3.7rem;
-    // margin-top: 4rem;
-    // @include screen(custom, max, 992) {
-    //   display: none;
-    // }
   }
 }

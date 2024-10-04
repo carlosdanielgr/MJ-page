@@ -6,6 +6,7 @@ import { MyHistoryComponent } from './components/my-history/my-history.component
 import { CourseDescriptionComponent } from './components/course-description/course-description.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +19,7 @@ import { ProductsComponent } from './components/products/products.component';
     CourseDescriptionComponent,
     CoursesComponent,
     ProductsComponent,
+    ProductDescriptionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

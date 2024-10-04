@@ -4,6 +4,7 @@
     data-dismiss="modal"
     aria-label="Close"
     class="btn-close modal-form__close"
+    (click)="closeModal()"
   ></button>
   <h6 class="modal-form__title">INSCRÍBETE A UNA CLASE COMPLETAMENTE GRATIS</h6>
   <p>
@@ -22,6 +23,8 @@
       rows="3"
     ></textarea>
     <button type="submit" class="btn btn-primary">Enviar</button>
-    <button type="button" class="btn btn-secondary">Luego</button>
+    <button type="button" class="btn btn-secondary" (click)="closeModal()">
+      Luego
+    </button>
   </form>
 </article>

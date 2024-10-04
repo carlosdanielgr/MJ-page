@@ -2,10 +2,16 @@
   <div class="main-content__navbar">
     <img class="main-content__logo" src="./assets/images/logo.png" alt="logo" />
     <div class="main-content__buttons">
-      <button type="button" class="btn btn-primary">
+      <a
+        href="https://www.youtube.com/@mirellajaramilloyoga"
+        target="_blank"
+        class="btn btn-primary"
+      >
         Visita mi canal de youtube
-      </button>
-      <button type="button" class="btn btn-secondary">¡Hablemos!</button>
+      </a>
+      <a [href]="API_WHATSAPP" target="_blank" class="btn btn-secondary">
+        ¡Hablemos!
+      </a>
     </div>
   </div>
   <h1 class="main-content__title">
@@ -14,7 +20,7 @@
   <figure class="main-content__img">
     <img src="./assets/images/main-web.png" alt="main" />
   </figure>
-  <button type="button" class="btn btn-secondary main-content__btn-more">
+  <a href="#form" class="btn btn-secondary main-content__btn-more">
     Descubrir más
-  </button>
+  </a>
 </main>

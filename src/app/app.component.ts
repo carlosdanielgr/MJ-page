@@ -8,6 +8,7 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ProductDescriptionComponent } from './components/product-description/product-description.component';
 import { BestSellersComponent } from './components/best-sellers/best-sellers.component';
+import { GarmentsComponent } from './components/garments/garments.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { BestSellersComponent } from './components/best-sellers/best-sellers.com
     ProductsComponent,
     ProductDescriptionComponent,
     BestSellersComponent,
+    GarmentsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

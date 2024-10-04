@@ -69,6 +69,11 @@ figure {
   }
 }
 
+.btn-radius {
+  border-radius: 50px;
+  padding: 0.5rem 3rem;
+}
+
 .btn-secondary {
   background-color: var(--cl-white);
   color: var(--cl-black);

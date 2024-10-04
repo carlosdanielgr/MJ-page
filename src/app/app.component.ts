@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { CircleImagesComponent } from './components/circle-images/circle-images.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -11,6 +11,8 @@ import { BestSellersComponent } from './components/best-sellers/best-sellers.com
 import { GarmentsComponent } from './components/garments/garments.component';
 import { FormComponent } from './components/form/form.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalFormComponent } from './components/modal-form/modal-form.component';
 
 @Component({
   selector: 'app-root',
@@ -32,4 +34,10 @@ import { FooterComponent } from './components/footer/footer.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent implements OnInit {
+  constructor(private readonly modalService: NgbModal) {}
+
+  ngOnInit(): void {
+    this.modalService.open(ModalFormComponent, { centered: true });
+  }
+}

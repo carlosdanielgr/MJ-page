@@ -1,0 +1,48 @@
+@use "./../../../styles/mixins" as *;
+
+.best-sellers {
+  background-color: #e9ebda;
+  color: #3d422e;
+  &__title {
+    background-color: #aec593;
+    color: #3d422e;
+    font-size: 2.1rem;
+    font-family: porsha;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    @include screen(med) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    span {
+      font-size: 0.9rem;
+    }
+  }
+  figure {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .best-sellers__obtain {
+        transform: translateY(0);
+        transition: transform 0.5s;
+      }
+    }
+  }
+  &__obtain {
+    transform: translateY(10rem);
+    position: absolute;
+    bottom: 0;
+    background-color: #f3d573;
+    width: 100%;
+    padding: 4rem;
+    text-align: center;
+  }
+}
+.btn-primary {
+  border-radius: 50px;
+}

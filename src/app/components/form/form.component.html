@@ -1,20 +1,35 @@
 <article class="form">
-  <form class="form__content">
+  <form class="form__content" [formGroup]="form">
     <h6 class="form__title">QUIERO INSCRIBIRME</h6>
     <p>
       Estoy aquí para acompañarte en tu camino. Si tienes preguntas o te
       gustaría saber más sobre mis clases, ¡hablemos!
     </p>
-    <input type="text" placeholder="NOMBRE" />
-    <input type="number" placeholder="NÚMERO DE CONTÁCTO" />
-    <input type="email" placeholder="CORREO ELECTRÓNICO" />
+    <input type="text" placeholder="NOMBRE" formControlName="name" />
+    <input
+      type="number"
+      placeholder="NÚMERO DE CONTÁCTO"
+      formControlName="phone"
+    />
+    <input
+      type="email"
+      placeholder="CORREO ELECTRÓNICO"
+      formControlName="email"
+    />
     <textarea
       placeholder="¿ALGO QUE QUIERAS CONTARME?"
       cols="20"
       rows="5"
+      formControlName="somethingToTell"
     ></textarea>
     <div class="text-center pt-3">
-      <button type="button" class="btn btn-primary btn-radius">ENVIAR</button>
+      <button
+        type="button"
+        class="btn btn-primary btn-radius"
+        (click)="sendForm()"
+      >
+        ENVIAR
+      </button>
     </div>
   </form>
   <figure>

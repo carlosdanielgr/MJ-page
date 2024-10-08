@@ -29,7 +29,7 @@
     }
   }
   &__title {
-    @include absoluteCenter(50%, 30%);
+    @include absoluteCenter(50%, 23%);
     text-align: center;
     color: var(--bg-color);
     z-index: 1;

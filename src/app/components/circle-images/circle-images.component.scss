@@ -18,7 +18,11 @@
   padding: 2rem 1rem;
   background-image: url(./../../../assets/images/circle-images/circle.png);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 45rem;
+  background-position: center;
+  @include screen(custom, min, 600) {
+    background-size: 100%;
+  }
   &__img-primary {
     @extend %content-imgs;
     margin-bottom: 5rem;
@@ -36,8 +40,11 @@
   }
   &__text-info {
     text-align: center;
-    max-width: 38rem;
+    max-width: calc(38rem - 22vw);
     margin: 0 auto;
+    @include screen(med-small) {
+      max-width: 38rem;
+    }
     > h2 {
       font-family: porsha;
       font-size: 1.8rem;

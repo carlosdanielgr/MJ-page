@@ -13,16 +13,27 @@
     condición física, pueda beneficiarse. Solo necesitas muchas ganas de
     relajarte y disfrutar.
   </p>
-  <form class="modal-form__content">
-    <input type="text" placeholder="NOMBRE" />
-    <input type="number" placeholder="NÚMERO DE CONTÁCTO" />
-    <input type="email" placeholder="CORREO ELECTRÓNICO" />
+  <form class="modal-form__content" [formGroup]="form">
+    <input type="text" placeholder="NOMBRE" formControlName="name" />
+    <input
+      type="number"
+      placeholder="NÚMERO DE CONTÁCTO"
+      formControlName="phone"
+    />
+    <input
+      type="email"
+      placeholder="CORREO ELECTRÓNICO"
+      formControlName="email"
+    />
     <textarea
       placeholder="¿ALGO QUE QUIERAS CONTARME?"
       cols="20"
       rows="3"
+      formControlName="somethingToTell"
     ></textarea>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button type="submit" class="btn btn-primary" (click)="sendForm()">
+      Enviar
+    </button>
     <button type="button" class="btn btn-secondary" (click)="closeModal()">
       Luego
     </button>

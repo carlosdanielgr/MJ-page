@@ -4,13 +4,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class FormService {
+export class EmailService {
   constructor(private readonly http: HttpClient) {}
 
-  postForm(body: Record<string, any>) {
-    return this.http.post(
-      'https://api.apispreadsheets.com/data/FIgvPFEl5fUdA6dV/',
-      body
-    );
+  sendEmail(body: { subject: string; to: string; type?: 'zafu' }) {
+    return this.http.post('http://localhost:3000/send-email', body);
   }
 }

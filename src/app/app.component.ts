@@ -41,6 +41,7 @@ export class AppComponent implements OnInit {
   constructor(private readonly modalService: NgbModal) {}
 
   ngOnInit(): void {
-    this.modalService.open(ModalFormComponent, { centered: true });
+    if (localStorage.getItem('form') !== 'true')
+      this.modalService.open(ModalFormComponent, { centered: true });
   }
 }

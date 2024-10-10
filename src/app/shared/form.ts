@@ -1,5 +1,6 @@
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormService } from '../services/form.service';
+import { EmailService } from '../services/email.service';
 
 export class Form {
   form = new FormGroup({
@@ -9,7 +10,10 @@ export class Form {
     somethingToTell: new FormControl('', Validators.required),
   });
 
-  constructor(protected readonly formService: FormService) {}
+  constructor(
+    protected readonly formService: FormService,
+    protected readonly emailService: EmailService
+  ) {}
 
   sendForm() {
     if (this.form.invalid) return;
@@ -23,6 +27,13 @@ export class Form {
     this.formService.postForm(body).subscribe({
       next: () => {
         this.form.reset();
+        localStorage.setItem('form', 'true');
+        this.emailService
+          .sendEmail({
+            subject: '',
+            to: email as string,
+          })
+          .subscribe();
       },
     });
   }

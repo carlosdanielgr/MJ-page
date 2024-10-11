@@ -8,6 +8,6 @@ export class EmailService {
   constructor(private readonly http: HttpClient) {}
 
   sendEmail(body: { subject: string; to: string; type?: 'zafu' }) {
-    return this.http.post('http://localhost:3000/send-email', body);
+    return this.http.post('https://mailing-ua2d.onrender.com/send-email', body);
   }
 }

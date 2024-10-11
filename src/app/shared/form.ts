@@ -32,17 +32,20 @@ export class Form {
         this.form.reset();
         localStorage.setItem('form', 'true');
         this.loading = false;
-        this.emailService
-          .sendEmail({
-            subject:
-              '¡Gracias por registrarte a nuestra Master Class de Yoga !',
-            to: email as string,
-          })
-          .subscribe();
+        this.sendEmail(email as string);
       },
       error: () => {
         this.loading = false;
       },
     });
+  }
+
+  sendEmail(email: string) {
+    this.emailService
+      .sendEmail({
+        subject: '¡Gracias por registrarte a nuestra Master Class de Yoga !',
+        to: email as string,
+      })
+      .subscribe();
   }
 }

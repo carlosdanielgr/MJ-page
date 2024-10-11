@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { API_WHATSAPP } from '../../global.constant';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
@@ -10,5 +9,5 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  API_WHATSAPP = API_WHATSAPP;
+  API_WHATSAPP = 'https://wa.link/44jht1';
 }

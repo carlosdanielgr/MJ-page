@@ -52,6 +52,10 @@
     padding: 1rem 1rem 4rem;
     background-color: #e0e0e0;
     margin: 1.5rem 1rem;
+    img {
+      max-height: 30rem;
+      object-fit: contain;
+    }
     a {
       color: #8b9078;
     }
